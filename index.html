@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaoruko Waguri</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+<body>
+    <header class="list">
+        <ul>
+            <li><a href="#section1">Music</a></li>
+            <li><a href="#section2">Foto</a></li> 
+            <li><a href="#section3">Video</a></li> 
+        </ul>
+    </header>
+    <div id="section1" class="section1">
+        <div class="player-container">
+            <div class="img-container">
+                <img src="" alt="Album Art">
+            </div>
+            <h2 id="title"></h2>
+            <h3 id="artist"></h3>
+            <audio src=""></audio>
+            <div class="progress-container" id="progress-container">
+                <div class="progress" id="progress"></div>
+                <div class="duration-wrapper">
+                    <span id="current-time">0:00</span>
+                    <span id="duration"></span>
+                </div>
+            </div>
+            <div class="player-controls">
+                <i class="fas fa-backward" id="prev" title="Previous"></i>
+                <i class="fas fa-play main-button" id="play" title="Play"></i>
+                <i class="fas fa-forward" id="next" title="Next"></i>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div id="section2" class = "section2">
+        <div class="container">
+            <div class="box box-1" style="--img: url('assets/kaoruko1.jpeg');" data-text="I"></div>
+            <div class="box box-2" style="--img: url('assets/kaoruko2.jpeg');" data-text="Love"></div>
+            <div class="box box-3" style="--img: url('assets/kaoruko3.jpg');" data-text="Kaoruko"></div>
+            <div class="box box-4" style="--img: url('assets/kaoruko4.jpeg');" data-text="Waguri"></div> 
+        </div>
+    </div>
+    <div id="section3" class="section3">
+        <div class="video-background">
+            <div class="video-container">
+                <video id="video-player" controls>
+                    <source src="assets/video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <h2 class="caption">IM ADDICTED TO KAORUKO</h2>
+        <div class="button-container">
+            <a href="form.html" class="button-video3">Klik di sini</a>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

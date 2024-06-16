@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.css">
+    <title>form</title>
+</head>
+<body>
+    <div class="main-content">
+        <div class="container">
+            <h1 class="judul">Contact Form</h1>
+            <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" placeholder="Masukan nama kamu" required>
+                </div>
+                <div class="form-group">
+                    <label for="who">Siapa karakter favorit kamu?:</label>
+                    <select id="who" name="who" required>
+                        <option value="">Pilih karakter</option>
+                        <option value="Kaoruko">Kaoruko Waguri</option>
+                        <option value="Madoka">Madoka Yuzuhara</option>
+                        <option value="Ayumi">Ayumi Sawatari</option>
+                        <option value="Subaru">Subaru Hoshina</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="birthdate">Tanggal:</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                </div>
+                <div class="form-group">
+                    <label>
+                        Jenis Kelamin:
+                        <input type="radio" name="gender" value="laki-laki">
+                        Laki-laki
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="gender" value="perempuan">
+                        Perempuan
+                    </label>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Alamat:</label>
+                    <textarea id="message" name="alamat" rows="4" placeholder="Masukan alamat kamu" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="button-container">
+            <a href="index.html" class="button-video3">Klik di sini</a>
+        </div>
+    </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+    
+        const name = document.getElementById('name').value;
+        const who = document.getElementById('who').value;
+        const birthdate = document.getElementById('birthdate').value;
+        const gender = document.querySelector('input[name="gender"]:checked').value;
+        const alamat = document.getElementById('message').value;
+    
+        swal({
+            title: "Form Data",
+            text: `Nama: ${name}\nKarakter Favorit: ${who}\nTanggal: ${birthdate}\nJenis Kelamin: ${gender}\nAlamat: ${alamat}`,
+            icon: "success",
+        });
+    });
+</script>
+</html>
